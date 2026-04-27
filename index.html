@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sơ đồ tư duy Toán 12</title>
+  <style>
+    body { margin: 0; padding: 0; height: 100vh; overflow: hidden; }
+    .markmap { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
+  <div class="markmap">
+ # GTLN và GTNN của hàm số (Toán 12 - GDPT 2018)
+## 1. Bản chất cốt lõi
+- Khái niệm
+    - $M = \max_D f(x) \Leftrightarrow f(x) \le M, \forall x \in D$ và $\exists x_0 \in D$ sao cho $f(x_0) = M$
+    - $m = \min_D f(x) \Leftrightarrow f(x) \ge m, \forall x \in D$ và $\exists x_0 \in D$ sao cho $f(x_0) = m$
+- Phân biệt với Cực trị
+    - Cực trị là tính chất "địa phương" (chỉ so sánh với các điểm lân cận)
+    - GTLN, GTNN là tính chất "toàn cục" (so sánh trên toàn bộ tập $D$ đang xét)
+[Image of absolute maximum and minimum on a graph]
+## 2. Tìm GTLN, GTNN trên một đoạn $[a; b]$
+- Điều kiện: Hàm số liên tục trên đoạn $[a; b]$ (đảm bảo luôn tồn tại Max, Min)
+- Quy tắc 3 bước (Không cần lập Bảng biến thiên):
+    - Bước 1: Tính $f'(x)$. Tìm các điểm $x_1, x_2... \in (a; b)$ làm $f'(x)=0$ hoặc không xác định.
+    - Bước 2: Tính $f(a), f(b)$ và $f(x_1), f(x_2)...$
+    - Bước 3: So sánh các giá trị vừa tính. 
+        - Số lớn nhất là $\max_{[a; b]} f(x)$
+        - Số nhỏ nhất là $\min_{[a; b]} f(x)$
+## 3. Tìm GTLN, GTNN trên một khoảng $(a; b)$ hoặc nửa khoảng
+- Quy tắc: Bắt buộc phải lập Bảng biến thiên
+    - Bước 1: Tính $f'(x)$ và tìm các nghiệm.
+    - Bước 2: Lập Bảng biến thiên của $f(x)$ trên tập $D$ đang xét.
+    - Bước 3: Dựa vào sự đi lên/đi xuống của mũi tên và các giới hạn (lim) ở đầu mút để kết luận.
+- Lưu ý "chết người": Nếu giá trị lớn nhất/nhỏ nhất rơi vào vị trí đầu mút là dấu ngoặc tròn (ví dụ $x=a$ mà khoảng là $(a; b)$) thì hàm số KHÔNG có GTLN/GTNN.
+## 4. Ứng dụng thực tiễn (Trọng tâm thi THPT 2025)
+- Các bài toán thường gặp:
+    - Kinh tế: Tối đa hóa lợi nhuận, tối thiểu hóa chi phí.
+    - Hình học: Thể tích hộp lớn nhất, diện tích bề mặt nhỏ nhất.
+    - Vật lý: Vận tốc lớn nhất, chi phí vật liệu ít nhất.
+- Quy trình mô hình hóa (4 bước):
+    - Bước 1: Đặt biến số $x$ (thường là độ dài, thời gian, số lượng...) và tìm điều kiện của $x$ (tập $D$).
+    - Bước 2: Thiết lập hàm số mục tiêu $y = f(x)$ biểu thị đại lượng cần tối ưu.
+    - Bước 3: Dùng đạo hàm tìm GTLN/GTNN của $f(x)$ trên $D$.
+    - Bước 4: Đối chiếu điều kiện và đưa ra kết luận thực tế.
+  </div>
+</body>
+</html>
